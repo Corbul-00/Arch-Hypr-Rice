@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "mpris"
+    ],
+    "modules-right": [
+        "custom/processes",
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent_workspaces": {
+            "1": [], "2": [], "3": [], "4": [], "5": []
+        }
+    },
+    "hyprland/window": {
+        "max-length": 50
+    },
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{player_icon} {title} - {artist} (Paused)",
+        "interval": 1,
+        "tooltip-format": "{album}\n{status}\n{position}/{length}",
+        "player-icons": {
+            "default": "🎵",
+            "spotify": "🎶",
+            "firefox": "🌐"
+        }
+    },
+    "custom/processes": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/processes.sh",
+        "interval": 30,
+        "tooltip": "Running: Discord/Steam"
+    },
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰌙",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "Connected",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "tooltip-format": "Volume: {volume}%"
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "bat": "BAT1"
+    },
+    "clock": {
+        "format": "{:%H:%M %d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+        "on-click": "notify-send \"$(cal)\" -t 10000"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}    
+

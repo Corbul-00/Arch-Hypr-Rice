@@ -1,0 +1,23 @@
+#? Btop++ theme to match Kitty's dark purple aesthetic
+
+main_bg                 #2d1338
+main_fg                 #d8c2f0
+title                   #8b5cf6
+hi_fg                   #ffffff
+selected_bg             #8b5cf6
+selected_fg             #ffffff
+cpu_box                 #2a2a6e
+mem_box                 #2a2a6e
+net_box                 #2a2a6e
+proc_box                #2a2a6e
+info_box                #2a2a6e
+graph_text              #d8c2f0
+meter_bg                #2a2a6e
+process_gradient_start  #8b5cf6
+process_gradient_end    #d8c2f0
+cpu_gradient_start      #8b5cf6
+cpu_gradient_end        #d8c2f0
+mem_gradient_start      #8b5cf6
+mem_gradient_end        #d8c2f0
+net_gradient_start      #8b5cf6
+net_gradient_end        #d8c2f0

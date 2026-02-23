@@ -1,0 +1,44 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Font Awesome 6 Free", monospace;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;       /* reset for child elements */
+    min-height: 0;
+}
+
+#waybar {
+    background: rgba(40, 30, 60, 0.88);   /* slightly more opaque so rounding pops */
+    color: #d8c2f0;
+    border-radius: 18px;                  /* ← main rounded value – play here */
+    border: 2px solid #33ccff;           /* optional vibrant purple border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);  /* floating shadow – very ricer */
+    margin: 4px;                          /* tiny extra safety margin */
+    transition: border-radius 0.15s ease; /* smooth feel when height changes */
+}
+
+/* Make sure modules don't have their own rounding or borders */
+#workspaces button,
+#custom-processes, #network, #pulseaudio, #battery, #clock, #tray, #mpris {
+    border-radius: 0;
+    background: transparent;
+    padding: 0 6px;
+    margin: 0 7px;                        /* small inner spacing */
+}
+
+/* Keep your active workspace highlight – now it looks nice inside the pill */
+#workspaces button.active {
+    margin: 6px;    
+    background: #8b5cf6;
+    border-radius: 4px;                   /* slightly smaller than outer radius */
+    color: white;
+}
+
+/* Muted & music stay the same */
+#pulseaudio.muted {
+    color: #f38ba8;
+}
+
+#mpris {
+    padding: 0 10px;
+    color: #c4b5fd;
+}

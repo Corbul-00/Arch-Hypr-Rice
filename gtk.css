@@ -1,0 +1,40 @@
+/* Main window */
+window {
+    background-color: rgba(60, 50, 80, 0.7); /* Dark purple, matching Waybar */
+    color: #d8c2f0; /* Light purple text */
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+}
+
+/* Thunar-specific: file list and sidebar */
+.thunar .standard-view frame > border,
+.thunar .sidebar {
+    background-color: rgba(40, 30, 60, 0.75);
+    color: #d8c2f0;
+}
+
+/* Toolbar */
+.thunar toolbar {
+    background: rgba(40, 30, 60, 0.85);
+    color: #d8c2f0;
+}
+
+/* Buttons */
+.thunar button {
+    background: #8b5cf6; /* Vibrant purple */
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.thunar button:hover {
+    background: #a78bfa; /* Lighter purple on hover */
+}
+
+/* Ensure file view background isn’t white */
+.thunar .view,
+.thunar .view scrolledwindow,
+.thunar .view treeview {
+    background-color: rgba(40, 30, 60, 0.7);
+    color: #d8c2f0;
+}
+
